@@ -2,7 +2,7 @@ var express = require('express');
 var webpackHandle = require("./webpack/webpackHandle");
 var route = require("./server/route/index");
 var bodyParser = require("body-parser");
-app = express();
+var app = express();
 
 webpackHandle(app);
 

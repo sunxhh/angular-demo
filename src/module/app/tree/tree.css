@@ -1,0 +1,43 @@
+.resource-tree-wrapper {
+
+}
+
+.triangle {
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+
+.triangle-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 10px solid #333;
+}
+
+.triangle-right {
+    width: 0;
+    height: 0;
+    border-top: 5px solid transparent;
+    border-left: 10px solid #333;
+    border-bottom: 5px solid transparent;
+}
+
+.tree-label {
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+.tree-label input {
+    cursor: pointer;
+    vertical-align: middle;
+    margin: 0px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+.tree-label span {
+    vertical-align: middle;
+}
