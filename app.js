@@ -11,7 +11,9 @@ app.set('port', process.env.PORT || 3333);
 app.use(express.static('./dist'));
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({
+    extended: false
+}));
 
 route(app);
 

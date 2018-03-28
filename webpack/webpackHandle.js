@@ -4,9 +4,7 @@ var config = require('./webpack.dev.js');
 
 module.exports = function(app) {
     var compiler = webpack(config);
-    compiler.run((err, stats) => {
-        if (err || stats.hasErrors()) {}
-    });
+
     /*
         发现问题，当 run 和watch同时存在时，第一次编译后会报错  Uncaught TypeError: __webpack_require__(...) is not a function
         当只有run的时候一切正常
@@ -25,6 +23,6 @@ module.exports = function(app) {
         }));
         console.log("watch 修改成功");
     });
-    watching.invalidate();
+    // watching.invalidate();
     return compiler;
 };
