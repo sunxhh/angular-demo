@@ -9,7 +9,8 @@ const resolve = function(src) {
 
 module.exports = {
     entry: {
-        app: resolve('src/test.ts')
+        polyfills: resolve('src/polyfills.ts'),
+        app: resolve('src/main.ts')
     },
     output: {
         filename: '[name].bundle.js',
@@ -23,8 +24,8 @@ module.exports = {
     ],
     module: {
         rules: [{
-            test: /\.tsx?$/,
-            loader: "ts-loader"
+            test: /\.ts?$/,
+            loaders: ["ts-loader", 'angular2-template-loader']
         }, {
             test: /\.css$/,
             use: [
